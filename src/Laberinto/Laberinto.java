@@ -1,8 +1,12 @@
 package Laberinto;
 import becker.robots.*;
 /**
- *
- * @author Diego
+ * Clase para crear el laberinto donde Karel se va a mover, y adicionalmente
+ * los metodos necesarios para que salga de este mismo.
+ * @author Diego Alejandro Gutierrez Rojas
+ * @author Lina Paola Correa Ballen
+ * @author Diego Alexander Ramirez Vela
+ * @author Julian David Escobar Jamioy
  */
 public class Laberinto {
 
@@ -11,7 +15,12 @@ public class Laberinto {
     private Wall pared;
     private Thing balon;   
     
-    
+    /**
+     * Constructor para el Laberinto.
+     * Se Crea el laberinto como una ciudad de la clase City
+     * y ademas se ponen las paredes (Wall's) y el thing (Thing) que indica la salida.
+     * 
+     */
     public Laberinto(){
         
       this.Laberinto = new City(10,10);
@@ -131,7 +140,11 @@ public class Laberinto {
     
     }
     
-    
+    /**
+     * Método para poner a Karel en una posición particular deseada.
+     * @param x me da la posición x de Karel en el laberinto
+     * @param y me da la posición y de Karel en el laberinto
+     */
     public void Posicion_Karel(int x, int y){
     
         this.joe = new Robot (Laberinto,x,y,Direction.WEST);
@@ -140,7 +153,9 @@ public class Laberinto {
         
     }
     
-    
+    /**
+     * Método que hace que Karel salga de cualquier laberinto
+     */
         
     public void salir(){
       int p=0;
